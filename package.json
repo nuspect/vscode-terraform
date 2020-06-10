@@ -172,7 +172,8 @@
     "vscode:prepublish": "npm run test && npm run compile",
     "compile": "tsc -b",
     "watch": "tsc -b -w",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package"
   },
   "dependencies": {
     "@octokit/rest": "^17.1.3",
