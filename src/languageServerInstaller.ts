@@ -1,5 +1,4 @@
 import * as vscode from 'vscode';
-
 import cp = require('child_process');
 import * as crypto from 'crypto';
 import * as fs from 'fs';
@@ -19,7 +18,7 @@ interface Release {
 
 export class LanguageServerInstaller {
 	public async install(directory: string) {
-		const extensionVersion = '2.1.2'; // TODO set this programatically
+		const { version: extensionVersion } = require('../package.json');
 		const lspCmd = `${directory}/terraform-ls --version`;
 		const userAgent = `Terraform-VSCode/${extensionVersion} VSCode/${vscode.version}`;
 		let isInstalled = true;
